@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Celebration of Chinnaa - Happy 40th Birthday</title>
+    
+    <!-- Google Fonts: Playfair Display for elegant headings, Inter for readable body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#fdf8f5', // Warm cream
+                            pink: '#fce7f3',
+                            rose: '#fda4af',
+                            maroon: '#881337', // Deep rich red/maroon
+                            gold: '#b45309',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in': 'fadeIn 2s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for Scroll Reveal and Background FX -->
+    <style>
+        body {
+            background-color: #fdf8f5;
+            overflow-x: hidden;
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 30px rgba(136, 19, 55, 0.05);
+        }
+
+        /* Floating particles canvas */
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .content-layer {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased selection:bg-brand-rose selection:text-white">
+
+    <!-- Background Canvas for Floating Hearts/Particles -->
+    <canvas id="particles"></canvas>
+
+    <main class="content-layer max-w-4xl mx-auto px-6 py-12 md:py-24">
+        
+        <!-- Hero Section -->
+        <header class="text-center mb-24 animate-fade-in">
+            <div class="inline-block mb-6 px-4 py-1 rounded-full bg-brand-pink text-brand-maroon text-sm font-semibold tracking-widest uppercase">
+                ❤️ 28 October 2026 ❤️
+            </div>
+            <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-brand-maroon leading-tight mb-6 animate-float">
+                The Day My Chinnaa<br>Came Into This World
+            </h1>
+            <div class="w-24 h-1 bg-brand-gold mx-auto rounded-full mb-8"></div>
+        </header>
+
+        <!-- Intro -->
+        <section class="reveal glass-card rounded-3xl p-8 md:p-12 mb-16 text-lg md:text-xl leading-relaxed font-light text-gray-700 space-y-6">
+            <p class="font-serif text-2xl text-brand-maroon font-semibold">My dearest Chinnaa,</p>
+            <p>Today is not just another birthday. It is a celebration of <em>you</em> — the beautiful life you have lived, the woman you have become, the experiences that have shaped you, and all the wonderful chapters that are still waiting to unfold.</p>
+            <p>On 28 October 1986, the world welcomed you. And today, exactly 40 years later, we celebrate four decades of your existence — a life measured not merely in years, but in experiences, memories, laughter, lessons, courage, and all the little things that make you uniquely you.</p>
+            <p>So, before we celebrate the beautiful woman you are today, let's take a little journey through time — through the numbers, the stars, the people, the history, and the remarkable world that shares your birthday.</p>
+        </section>
+
+        <!-- 1. By the Numbers -->
+        <section class="reveal mb-20">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-maroon mb-8 text-center">✨ Forty Years of You — By the Numbers</h2>
+            <p class="text-center text-lg mb-8 text-gray-600">As of 28 October 2026, today is your <strong>40th birthday!</strong></p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-8">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-pink text-center hover:-translate-y-1 transition-transform duration-300">
+                    <p class="text-3xl font-serif text-brand-maroon font-bold mb-2">14,610</p>
+                    <p class="text-sm text-gray-500 uppercase tracking-wide">Total Days Lived</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-pink text-center hover:-translate-y-1 transition-transform duration-300">
+                    <p class="text-3xl font-serif text-brand-maroon font-bold mb-2">2,087</p>
+                    <p class="text-sm text-gray-500 uppercase tracking-wide">Weeks (+1 Day)</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-pink text-center hover:-translate-y-1 transition-transform duration-300">
+                    <p class="text-3xl font-serif text-brand-maroon font-bold mb-2">350K+</p>
+                    <p class="text-sm text-gray-500 uppercase tracking-wide">Approx Hours</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-pink text-center hover:-translate-y-1 transition-transform duration-300 col-span-2 md:col-span-1">
+                    <p class="text-3xl font-serif text-brand-maroon font-bold mb-2">21M+</p>
+                    <p class="text-sm text-gray-500 uppercase tracking-wide">Approx Minutes</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-pink text-center hover:-translate-y-1 transition-transform duration-300 col-span-2 md:col-span-2">
+                    <p class="text-3xl font-serif text-brand-maroon font-bold mb-2">Tuesday</p>
+                    <p class="text-sm text-gray-500 uppercase tracking-wide">Day of Birth</p>
+                </div>
+            </div>
+
+            <blockquote class="border-l-4 border-brand-maroon pl-6 py-2 my-8 italic text-xl text-gray-700 font-serif bg-brand-pink/30 rounded-r-xl">
+                Think about that for a moment, my love. Four decades. More than fourteen thousand days. Over twenty-one million minutes of life! Each number represents time you have lived, moments you have experienced, challenges you have faced, lessons you have learned, and memories that have quietly become part of your story.
+            </blockquote>
+            <p class="text-lg text-center font-medium text-brand-maroon">And yet, no number can truly measure the warmth of your smile, the depth of your heart, the strength of your spirit, or the beauty you bring into the lives of people who love you. Forty years is the number. You are the story. And your story is still unfolding. ❤️</p>
+        </section>
+
+        <!-- Astrology Section -->
+        <section class="reveal mb-24">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-maroon mb-12 text-center">Written in the Stars</h2>
+            
+            <div class="space-y-12">
+                <!-- Western -->
+                <div class="flex flex-col md:flex-row gap-8 items-center bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
+                    <div class="w-20 h-20 md:w-32 md:h-32 flex-shrink-0 bg-brand-pink rounded-full flex items-center justify-center text-4xl md:text-5xl shadow-inner">
+                        ♏
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-gray-800 mb-2">Your Western Zodiac — Scorpio</h3>
+                        <p class="text-sm text-brand-gold font-semibold uppercase tracking-wider mb-4">23 October – 21 November</p>
+                        <p class="text-gray-600 leading-relaxed mb-4">Scorpio is traditionally associated with intensity, magnetism, intuition, passion, emotional depth, and transformation. Scorpios born around this date are often described as possessing a commanding presence and a remarkable inner strength — the ability to feel deeply, observe keenly, and emerge stronger after life's difficult chapters.</p>
+                        <p class="text-gray-600 leading-relaxed italic">Not simply becoming older, but becoming more yourself with every passing year.</p>
+                    </div>
+                </div>
+
+                <!-- Chinese -->
+                <div class="flex flex-col md:flex-row gap-8 items-center bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
+                    <div class="w-20 h-20 md:w-32 md:h-32 flex-shrink-0 bg-brand-pink rounded-full flex items-center justify-center text-4xl md:text-5xl shadow-inner">
+                        🐅
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-gray-800 mb-2">Your Chinese Zodiac — The Fire Tiger</h3>
+                        <p class="text-sm text-brand-gold font-semibold uppercase tracking-wider mb-4">9 February 1986 – 28 January 1987</p>
+                        <p class="text-gray-600 leading-relaxed mb-4">You were born in the year traditionally associated with the Fire Tiger — a combination symbolising boldness, charisma, courage, energy, ambition, and natural leadership. The Tiger represents independence, while the Fire element adds warmth and vitality.</p>
+                        <p class="text-gray-600 leading-relaxed font-medium">A spirit that dares. A heart that feels. A presence that leaves an impression.</p>
+                    </div>
+                </div>
+
+                <!-- Vedic -->
+                <div class="flex flex-col md:flex-row gap-8 items-center bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
+                    <div class="w-20 h-20 md:w-32 md:h-32 flex-shrink-0 bg-brand-pink rounded-full flex items-center justify-center text-4xl md:text-5xl shadow-inner">
+                        ☀️
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-gray-800 mb-2">Your Vedic Astrology — Simha Rashi</h3>
+                        <p class="text-sm text-brand-gold font-semibold uppercase tracking-wider mb-4">Leo Moon | Makhaa Nakshatra | Ruled by Surya</p>
+                        <p class="text-gray-600 leading-relaxed mb-4">In Vedic astrology, Simha Rashi is associated with the Sun — a symbol of vitality, dignity, authority, confidence, and radiance. Makhaa Nakshatra connects with ancestry, heritage, and dignity.</p>
+                        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-1">
+                            <li><strong>Lucky Colours:</strong> Red, orange, maroon, deep pink.</li>
+                            <li><strong>Lucky Numbers:</strong> 9, 8, 1.</li>
+                            <li><strong>Lucky Day:</strong> Tuesday.</li>
+                        </ul>
+                        <p class="text-gray-600 leading-relaxed italic">There is something beautiful about the Sun as your ruling symbol: it does not need to announce its presence to illuminate the world around it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Famous People -->
+        <section class="reveal mb-20 bg-brand-maroon text-white rounded-3xl p-8 md:p-12 shadow-xl">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-8 text-center">🌟 The World You Share</h2>
+            <p class="text-center text-brand-pink mb-10 text-lg">It is always fun to discover the remarkable people who share a date with you.</p>
+            
+            <div class="grid md:grid-cols-2 gap-10 mb-10">
+                <div>
+                    <h3 class="font-serif text-2xl font-semibold mb-4 text-brand-gold border-b border-brand-gold/30 pb-2">Across the World</h3>
+                    <ul class="space-y-3 font-light text-brand-pink/90">
+                        <li><strong class="text-white">Bill Gates (1955)</strong> — Microsoft co-founder</li>
+                        <li><strong class="text-white">Julia Roberts (1967)</strong> — Acclaimed actress</li>
+                        <li><strong class="text-white">Joaquin Phoenix (1974)</strong> — Award-winning actor</li>
+                        <li><strong class="text-white">Jonas Salk (1914)</strong> — Developer of the polio vaccine</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-serif text-2xl font-semibold mb-4 text-brand-gold border-b border-brand-gold/30 pb-2">Indian Personalities</h3>
+                    <ul class="space-y-3 font-light text-brand-pink/90">
+                        <li><strong class="text-white">Aditi Rao Hydari</strong> — (Shares your exact birthday & year!)</li>
+                        <li><strong class="text-white">Indra Nooyi (1955)</strong> — Former CEO of PepsiCo</li>
+                        <li><strong class="text-white">Urjit Patel (1963)</strong> — Former RBI Governor</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 bg-white/10 p-6 rounded-2xl backdrop-blur-sm">
+                <p class="text-xl font-serif italic text-brand-pink">
+                    "And among all those names, there is one person whose birthday matters to me for a reason no list of famous people could ever explain: you, my Chinnaa."
+                </p>
+            </div>
+        </section>
+
+        <!-- 6. History -->
+        <section class="reveal mb-24 text-gray-700">
+            <h2 class="font-serif text-3xl font-bold text-brand-maroon mb-8">🌍 Major Historical Events on 28 October</h2>
+            <p class="mb-6 text-lg">Your birthday falls on a date associated with remarkable turning points in world history:</p>
+            
+            <div class="grid sm:grid-cols-2 gap-4">
+                <div class="border-l-2 border-brand-rose pl-4 py-2">
+                    <span class="font-bold text-brand-maroon">1492</span> — Columbus sights Cuba.
+                </div>
+                <div class="border-l-2 border-brand-rose pl-4 py-2">
+                    <span class="font-bold text-brand-maroon">1636</span> — Harvard College is founded.
+                </div>
+                <div class="border-l-2 border-brand-rose pl-4 py-2">
+                    <span class="font-bold text-brand-maroon">1867</span> — Sister Nivedita is born, dedicating her life to India.
+                </div>
+                <div class="border-l-2 border-brand-rose pl-4 py-2">
+                    <span class="font-bold text-brand-maroon">1886</span> — The Statue of Liberty is dedicated.
+                </div>
+                <div class="border-l-2 border-brand-rose pl-4 py-2">
+                    <span class="font-bold text-brand-maroon">1962</span> — The Cuban Missile Crisis moves toward its end.
+                </div>
+            </div>
+            <p class="mt-8 italic text-center text-gray-500">Your birthday is one small point on that enormous timeline — a reminder that every life begins in a particular moment, but what it comes to mean is shaped by everything that follows.</p>
+        </section>
+
+        <!-- 7 & 8. Era & Nostalgia -->
+        <section class="reveal mb-24 bg-gradient-to-br from-brand-pink to-white rounded-3xl p-8 md:p-12 shadow-sm border border-white">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-serif text-3xl font-bold text-brand-maroon mb-6">🇮🇳 The Era That Shaped You</h2>
+                    <p class="mb-4 text-gray-700">You are a Millennial — part of a generation that has witnessed India change in extraordinary ways. You have lived through the consequences of economic liberalisation, the IT boom, the mobile revolution, and sweeping cultural shifts.</p>
+                    <p class="text-gray-700">You are not merely forty years older than the day you were born. You are forty years richer in experience of a changing world.</p>
+                </div>
+                <div>
+                    <h2 class="font-serif text-3xl font-bold text-brand-maroon mb-6">🎬 Nostalgia from 1986</h2>
+                    <p class="mb-4 text-gray-700">In 1986, Indian cinema was buzzing with films such as <em>Karma</em>, <em>Nagina</em>, and <em>Diljalaa</em>. Across the world, audiences were enjoying <em>Top Gun</em> and Madonna's <em>True Blue</em> era.</p>
+                    <p class="text-gray-700 italic">Somewhere in that world, a little girl was beginning her own journey. She could not have known what the next four decades would hold...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Forties -->
+        <section class="reveal mb-24 text-center">
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-brand-maroon mb-8">💫 Welcome to Your Forties</h2>
+            <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Turning forty is often described as the beginning of a power decade — a stage when experience, clarity, perspective, and quiet confidence can begin to shine in new ways.</p>
+            
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-pink inline-block text-left mb-10">
+                <p class="font-serif text-brand-maroon text-xl mb-4 font-semibold">A time to pause and ask:</p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-center gap-3"><span class="text-brand-rose text-xl">♥</span> What makes me genuinely happy?</li>
+                    <li class="flex items-center gap-3"><span class="text-brand-rose text-xl">♥</span> What deserves more of my time and energy?</li>
+                    <li class="flex items-center gap-3"><span class="text-brand-rose text-xl">♥</span> Which dreams am I ready to pursue?</li>
+                    <li class="flex items-center gap-3"><span class="text-brand-rose text-xl">♥</span> What am I ready to leave behind?</li>
+                </ul>
+            </div>
+
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">May your forties be the years in which you feel increasingly comfortable in your own skin, increasingly confident in your choices, and increasingly free to enjoy the things that make life beautiful. May you laugh more freely, worry a little less, discover new interests, revisit old dreams, protect your peace, and make room for adventures you have not yet imagined.</p>
+        </section>
+
+        <!-- 10. Outro / Wish -->
+        <section class="reveal glass-card rounded-3xl p-8 md:p-16 text-center border-t-8 border-brand-maroon">
+            <h2 class="font-serif text-4xl font-bold text-brand-maroon mb-8">❤️ My Birthday Wish for You</h2>
+            
+            <div class="space-y-6 text-lg md:text-xl text-gray-800 font-light leading-relaxed mb-12">
+                <p>After all the numbers, zodiac signs, famous personalities, and historical milestones, I want to return to the simplest and most important thing about today.</p>
+                <p class="font-serif text-2xl text-brand-maroon font-semibold">Today is your birthday. The day your story began.</p>
+                <p>I wish you a year filled with good health, genuine happiness, emotional peace, beautiful surprises, meaningful achievements, and countless reasons to smile.</p>
+                <p>May you always have the courage to pursue what matters to you, the wisdom to recognise what deserves your energy, the strength to navigate difficult days, and the freedom to enjoy the beautiful ones without holding back.</p>
+                <p class="italic">"May you be surrounded by people who appreciate you, conversations that nourish you, experiences that excite you, and moments that make you stop and think, <strong>How beautiful life can be!</strong>"</p>
+                <p>And as you begin this new decade, may you remember that growing older is not about losing the person you once were. It is about carrying every version of yourself forward — the little girl, the young woman, the woman you are today, and all the wonderful versions of you still waiting to emerge.</p>
+            </div>
+
+            <div class="inline-block bg-brand-maroon text-white font-serif text-2xl md:text-4xl py-6 px-12 rounded-full shadow-xl animate-float mb-8">
+                Happy 40th birthday, my Chinnaa! ❤️
+            </div>
+
+            <p class="text-brand-gold font-serif text-xl italic">
+                Here's to forty wonderful years behind you — and to all the magic that is still waiting for you ahead. 🎂🌹
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Scripts for Interactivity -->
+    <script>
+        // Scroll Reveal Logic
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+
+        // Canvas Floating Particles (Subtle Hearts/Circles)
+        const canvas = document.getElementById('particles');
+        const ctx = canvas.getContext('2d');
+        
+        let width, height;
+        let particlesArray = [];
+        
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+        }
+        
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.size = Math.random() * 3 + 1;
+                this.speedY = Math.random() * 0.5 + 0.1;
+                this.speedX = (Math.random() - 0.5) * 0.3;
+                // Soft pinks and gold hues
+                const colors = ['rgba(253, 164, 175, 0.3)', 'rgba(252, 231, 243, 0.4)', 'rgba(180, 83, 9, 0.15)'];
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+            }
+            update() {
+                this.y -= this.speedY;
+                this.x += this.speedX;
+                
+                // Reset at bottom if they float up past the screen
+                if (this.y < -10) {
+                    this.y = height + 10;
+                    this.x = Math.random() * width;
+                }
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particlesArray = [];
+            // Create amount based on screen size
+            const numberOfParticles = (width * height) / 15000; 
+            for (let i = 0; i < numberOfParticles; i++) {
+                particlesArray.push(new Particle());
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, width, height);
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+                particlesArray[i].draw();
+            }
+            requestAnimationFrame(animateParticles);
+        }
+
+        initParticles();
+        animateParticles();
+    </script>
+</body>
+</html>
